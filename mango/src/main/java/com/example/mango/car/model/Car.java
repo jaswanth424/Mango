@@ -1,5 +1,5 @@
-package com.example.mango.model;
-
+package com.example.mango.car.model;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,14 +14,13 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Truck {
+public class Car {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String manufacturer;
-    private String model;
-
-
+    @Column(name = "employeeId")
+    private String id;
+    @Column(name = "studentName")
+    private String name;
+    @Column(name = "studentAge")
+    private String age;
 }

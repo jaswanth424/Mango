@@ -1,6 +1,7 @@
-package com.example.mango.model;
+package com.example.mango.mango.model;
 
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,8 +15,11 @@ import lombok.Setter;
 public class Mango {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
-	private String name;
+    @Column(name = "collegeId")
+    String id;
+    @Column(name = "collegeName")
+    String name;
+    @Column(name = "collegeLocation")
+    String location;
 
 }
